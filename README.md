@@ -13,7 +13,7 @@ VibeCinema is a modern web app for exploring and discovering movies and TV shows
 
 ## 🚀 Live Demo
 
-👉 [https://movies-beta-jade.vercel.app/]
+👉 [https://movies-self-tau.vercel.app/]
 
 ## 🛠️ Tech Stack
 
