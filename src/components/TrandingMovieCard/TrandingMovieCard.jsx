@@ -6,7 +6,7 @@ export default function TrandingMovieCard({ movie }) {
         <Link to={`/MovieDetails/${id}`} className='bg-[#1A1A1A] rounded-lg cursor-pointer'>
             <div className='p-2 lg:p-4'>
                 <span>
-                    <img src={`https://image.tmdb.org/t/p/w300${poster_path}`} alt="" className='w-full object-cover rounded-lg'/>
+                    <img src={`https://image.tmdb.org/t/p/w300${poster_path}`} alt="" className='w-full object-cover rounded-lg' loading="lazy" />
                 </span>
                 <div className="flex flex-col lg:flex-row justify-between items-start xs:items-center gap-2 mt-4">
                     <span className="bg-[#141414] border-[#262626] p-2 rounded-3xl text-sm lg:text-xs truncate w-fit">

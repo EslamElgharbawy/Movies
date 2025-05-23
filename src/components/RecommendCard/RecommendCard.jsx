@@ -13,6 +13,7 @@ export default function RecommendCard({ Recommendation }) {
                     src={image}
                     alt={name}
                     className="rounded-lg w-full object-cover"
+                    loading="lazy" 
                 />
             </span>
             <div className="flex justify-between items-center text-white text-[16px] pt-2">

@@ -7,6 +7,7 @@ export default function MovieSliderCard({ MovieInfo }) {
                     src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
                     alt={title}
                     className="w-full h-full object-cover"
+                    
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80  to-transparent" />
             </div>
