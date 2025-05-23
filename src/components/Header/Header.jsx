@@ -129,7 +129,6 @@ export default function Header() {
                             fetch(`https://api.themoviedb.org/3/search/multi?query=${searchTerm}&include_adult=false&language=en-US&page=1`, options)
                               .then(res => res.json())
                               .then(res => {
-                                console.log(res.results)
                                 setResults(res.results)
                               })
                               .catch(err => console.error(err));
@@ -138,7 +137,7 @@ export default function Header() {
                       />
 
                       {results.length > 0 ? (
-                        <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 ">
+                        <div className="container grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 ">
                           {results.map((item) => {
                             return <>
                               {item.poster_path &&
@@ -151,12 +150,12 @@ export default function Header() {
                                     <span>
                                       <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt="" className='w-full object-cover rounded-lg' />
                                     </span>
-                                    <div className="flex flex-col lg:flex-row justify-between items-start sm:items-center gap-2 mt-4">
+                                    <div className="flex flex-col lg:flex-row justify-between items-start xs:items-center gap-2 mt-4">
                                       <span className="bg-[#141414] border-[#262626] p-2 rounded-3xl text-sm lg:text-xs truncate w-fit">
                                         <p className="flex items-center text-[#999999] ">
                                           <i className="fa-solid fa-film mr-1"></i>
                                           <div className="line-clamp-1">
-                                            {item.title || item.name || item.original_title || item.original_name || "No Title"}
+                                            {item.title?.split(' ').slice(0, 3).join(' ') || item.name?.split(' ').slice(0, 3).join(' ') || item.original_title?.split(' ').slice(0, 3).join(' ') || item.original_name?.split(' ').slice(0, 3).join(' ') || "No Title"}
                                           </div>
                                         </p>
                                       </span>
