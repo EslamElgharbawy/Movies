@@ -16,14 +16,14 @@ export default function ShowDetails() {
     let { id } = useParams()
     const [openSeason, setOpenSeason] = useState(null);
 
-    const handleToggleSeason = (seasonNumber) => {
+    function handleToggleSeason(seasonNumber) {
         if (openSeason === seasonNumber) {
-            setOpenSeason(null); 
+            setOpenSeason(null);
         } else {
-            setOpenSeason(seasonNumber); 
-            getEpisodes(seasonNumber);   
+            setOpenSeason(seasonNumber);
+            getEpisodes(seasonNumber);
         }
-    };
+    }
 
     function getKeywords() {
         const options = {
